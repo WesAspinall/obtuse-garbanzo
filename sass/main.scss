@@ -1,0 +1,87 @@
+@import "bourbon";
+@import "font-awesome";
+
+$fontFamily:'Courier';
+
+body {
+  background: #e2ebf3;
+  font-family: $fontFamily;
+}
+
+
+h1{
+  text-align: center;
+}
+
+.deck{
+  display: inline-block;
+  width: 20%;
+  margin-left: 10%;
+  margin-right: 10%;
+  float: left;
+    ul{
+      list-style: none;
+      display:inline-block;
+
+    img {
+      height: 200px;
+    }
+
+    .button1{
+      margin-left: 20%;
+      margin-right: 10%;
+      border-radius: 20px;
+      background-color: white;
+      border: none;
+      font-family: $fontFamily;
+    }
+
+    button:hover{
+      background-color: #7BFFB9;
+    }
+
+    button:focus{
+      outline: none;
+    }
+  }
+}
+
+
+.deckCPU{
+  display: inline-block;
+  float: right;
+  margin-right: 10%;
+
+    ul{
+      display: inline-block;
+      list-style: none;
+    }
+    img{
+      height: 200px;
+      -moz-transform: scaleX(-1);
+      -o-transform: scaleX(-1);
+      -webkit-transform: scaleX(-1);
+      transform: scaleX(-1);
+      filter: FlipH;
+      -ms-filter: "FlipH";
+    }
+
+    button{
+      margin-left: 10%;
+      margin-right: 10%;
+      border-radius: 20px;
+      background-color: white;
+      border: none;
+      font-family: $fontFamily;
+    }
+
+    button:hover{
+      background-color: #7BFFB9;
+    }
+
+    button:focus{
+      outline: none;
+    }
+
+}
+
