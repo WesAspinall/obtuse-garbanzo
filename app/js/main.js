@@ -17,6 +17,19 @@ var _moment2 = _interopRequireDefault(_moment);
 
 console.log('Hello, World');
 
+// import player1 from './player1'
+
+// Player1 Instance
+
+// CPU Instance
+
+// Setting up on events
+
+(0, _jquery2['default'])('.button1').on('click', function () {
+
+  console.log('catfish');
+});
+
 },{"jquery":2,"moment":3,"underscore":4}],2:[function(require,module,exports){
 /*!
  * jQuery JavaScript Library v2.1.4

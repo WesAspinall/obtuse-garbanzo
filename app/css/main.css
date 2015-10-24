@@ -2036,7 +2036,7 @@ h1 {
     display: inline-block; }
     .deck ul img {
       height: 200px; }
-    .deck ul button {
+    .deck ul .button1 {
       margin-left: 20%;
       margin-right: 10%;
       border-radius: 20px;

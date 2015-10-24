@@ -3,12 +3,11 @@ import _ from 'underscore';
 import moment from 'moment';
 
 
-let player1 = function () {
+// let player1 = function () {
 
 
-  };
-
-};
+//   };
 
 
-export default player1;
+
+// export default player1;

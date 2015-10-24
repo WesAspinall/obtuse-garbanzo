@@ -4,7 +4,7 @@ import moment from 'moment';
 
 console.log('Hello, World');
 
-import player1 from './player1'
+// import player1 from './player1'
 
 
 
@@ -13,10 +13,10 @@ import player1 from './player1'
 // CPU Instance
 
 
-//Setting up on events
+// Setting up on events
 
-button1.on('click', function(){
+$('.button1').on('click', function() {
 
-console.log('catfish');
+  console.log('catfish');
 
 });
