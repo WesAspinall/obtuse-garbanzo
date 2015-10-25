@@ -2025,15 +2025,18 @@ body {
 h1 {
   text-align: center; }
 
+table {
+  max-width: 100%; }
+
 .deck {
   display: inline-block;
-  width: 20%;
-  margin-left: 10%;
-  margin-right: 10%;
+  width: 25%;
   float: left; }
   .deck ul {
     list-style: none;
-    display: inline-block; }
+    display: inline-block;
+    margin: 0;
+    padding: 0; }
     .deck ul img {
       height: 200px; }
     .deck ul .button1 {
@@ -2048,13 +2051,23 @@ h1 {
     .deck ul button:focus {
       outline: none; }
 
+.cardP1, .cardP2 {
+  width: 25%;
+  display: inline-block;
+  height: 200px; }
+
+.cardP2 {
+  width: 20%; }
+
 .deckCPU {
   display: inline-block;
   float: right;
-  margin-right: 10%; }
+  width: 25%; }
   .deckCPU ul {
     display: inline-block;
-    list-style: none; }
+    list-style: none;
+    margin: 0;
+    float: right; }
   .deckCPU img {
     height: 200px;
     -moz-transform: scaleX(-1);
@@ -2074,5 +2087,13 @@ h1 {
     background-color: #7BFFB9; }
   .deckCPU button:focus {
     outline: none; }
+
+footer {
+  height: 100px;
+  max-width: 100%;
+  padding-top: 50px; }
+  footer ul {
+    margin-left: 40%;
+    list-style: none; }
 
 /*# sourceMappingURL=main.css.map */

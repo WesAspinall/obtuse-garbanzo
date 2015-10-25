@@ -1,6 +1,10 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 'use strict';
 
+Object.defineProperty(exports, '__esModule', {
+  value: true
+});
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
 var _jquery = require('jquery');
@@ -15,22 +19,89 @@ var _moment = require('moment');
 
 var _moment2 = _interopRequireDefault(_moment);
 
-console.log('Hello, World');
+var CPU = function CPU() {};
 
-// import player1 from './player1'
+exports['default'] = CPU;
+module.exports = exports['default'];
+
+},{"jquery":4,"moment":5,"underscore":6}],2:[function(require,module,exports){
+'use strict';
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+var _jquery = require('jquery');
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+var _underscore = require('underscore');
+
+var _underscore2 = _interopRequireDefault(_underscore);
+
+var _moment = require('moment');
+
+var _moment2 = _interopRequireDefault(_moment);
+
+var _player1 = require('./player1');
+
+var _player12 = _interopRequireDefault(_player1);
+
+var _cpu = require('./cpu');
+
+var _cpu2 = _interopRequireDefault(_cpu);
+
+// Card Instance
 
 // Player1 Instance
+
+console.log('Hello, World');
+
+var TwoChainz = new _player12['default']();
 
 // CPU Instance
 
 // Setting up on events
 
+var display = function display() {
+
+  (0, _jquery2['default'])('.cardP1').addClass();
+};
+
 (0, _jquery2['default'])('.button1').on('click', function () {
 
-  console.log('catfish');
+  var genNum = function getRandomIntInclusive(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  };
+
+  console.log(genNum(1, 13));
 });
 
-},{"jquery":2,"moment":3,"underscore":4}],2:[function(require,module,exports){
+},{"./cpu":1,"./player1":3,"jquery":4,"moment":5,"underscore":6}],3:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, '__esModule', {
+  value: true
+});
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+var _jquery = require('jquery');
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+var _underscore = require('underscore');
+
+var _underscore2 = _interopRequireDefault(_underscore);
+
+var _moment = require('moment');
+
+var _moment2 = _interopRequireDefault(_moment);
+
+var Player1 = function Player1() {};
+
+exports['default'] = Player1;
+module.exports = exports['default'];
+
+},{"jquery":4,"moment":5,"underscore":6}],4:[function(require,module,exports){
 /*!
  * jQuery JavaScript Library v2.1.4
  * http://jquery.com/
@@ -9242,7 +9313,7 @@ return jQuery;
 
 }));
 
-},{}],3:[function(require,module,exports){
+},{}],5:[function(require,module,exports){
 //! moment.js
 //! version : 2.10.6
 //! authors : Tim Wood, Iskren Chernev, Moment.js contributors
@@ -12438,7 +12509,7 @@ return jQuery;
     return _moment;
 
 }));
-},{}],4:[function(require,module,exports){
+},{}],6:[function(require,module,exports){
 //     Underscore.js 1.8.3
 //     http://underscorejs.org
 //     (c) 2009-2015 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
@@ -13988,7 +14059,7 @@ return jQuery;
   }
 }.call(this));
 
-},{}]},{},[1])
+},{}]},{},[2])
 
 
 //# sourceMappingURL=main.js.map

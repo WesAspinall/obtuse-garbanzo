@@ -3,12 +3,11 @@ import _ from 'underscore';
 import moment from 'moment';
 
 
-let Player1 = function() {
+let CPU = function() {
 
 
 };
 
 
 
-
-export default Player1;
+export default CPU;

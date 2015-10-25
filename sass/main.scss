@@ -13,15 +13,22 @@ h1{
   text-align: center;
 }
 
+
+table{
+  max-width: 100%;
+}
+
 .deck{
   display: inline-block;
-  width: 20%;
-  margin-left: 10%;
-  margin-right: 10%;
+  width: 25%;
+  // margin-left: 10%;
+  // margin-right: 10%;
   float: left;
     ul{
       list-style: none;
       display:inline-block;
+      margin: 0;
+      padding: 0;
 
     img {
       height: 200px;
@@ -47,15 +54,35 @@ h1{
 }
 
 
+
+
+.cardP1, .cardP2{
+
+width: 25%;
+display: inline-block;
+height: 200px;
+
+
+}
+
+.cardP2{
+  width: 20%;
+}
+
+
 .deckCPU{
   display: inline-block;
   float: right;
-  margin-right: 10%;
+  // margin-right: 10%;
+  width: 25%;
 
     ul{
       display: inline-block;
       list-style: none;
+      margin: 0;
+      float: right;
     }
+
     img{
       height: 200px;
       -moz-transform: scaleX(-1);
@@ -84,4 +111,18 @@ h1{
     }
 
 }
+
+
+footer{
+  height: 100px;
+  max-width: 100%;
+  padding-top: 50px;
+
+  ul{
+    margin-left: 40%;
+    list-style: none;
+  }
+}
+
+// cards
 
