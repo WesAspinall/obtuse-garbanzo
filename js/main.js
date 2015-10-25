@@ -6,7 +6,7 @@ console.log('Hello, World');
 
 import Player1 from './player1';
 import CPU from './cpu';
-import playingCard from './playingcard';
+import Card from './card';
 
 
 
@@ -17,8 +17,15 @@ import playingCard from './playingcard';
 
 let cardQuantity = 52;
 let countCard = function() {
+
   cardQuantity -= 1;
   console.log(cardQuantity);
+
+  if (cardQuantity <= 0) {
+    console.log ('end of deck');
+  } else {
+    console.log('play');
+  }
 };
 
 $('.button1').on('click', countCard);

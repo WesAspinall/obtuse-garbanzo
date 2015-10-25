@@ -19,12 +19,67 @@ var _moment = require('moment');
 
 var _moment2 = _interopRequireDefault(_moment);
 
+// Suit Constructor
+var Suit = function Suit() {
+
+  this.diamonds = 'diamonds', this.hearts = 'hearts', this.spades = 'spades', this.clubs = 'clubs';
+};
+
+// CardConstructor
+var Card = function Card(name, suit, img, cardValue) {
+
+  this.name = name, this.suit = suit, this.img = img, this.cardValue = cardValue;
+};
+
+Card.prototype.toString = function () {
+  var value = '';
+  switch (this.suit) {
+    case Suit.hearts:
+      value = 'Hearts';
+    case Suit.clubs:
+      value = 'Clubs';
+    case Suit.diamonds:
+      value = 'Diamonds';
+    case Suit.spades:
+      value = 'Spades';
+  }
+};
+
+var deck = [];
+
+deck.push(new Card('', '', '', ''));
+
+deo;
+exports['default'] = Card;
+module.exports = exports['default'];
+
+},{"jquery":5,"moment":6,"underscore":7}],2:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, '__esModule', {
+  value: true
+});
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+var _jquery = require('jquery');
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+var _underscore = require('underscore');
+
+var _underscore2 = _interopRequireDefault(_underscore);
+
+var _moment = require('moment');
+
+var _moment2 = _interopRequireDefault(_moment);
+
 var CPU = function CPU() {};
 
 exports['default'] = CPU;
 module.exports = exports['default'];
 
-},{"jquery":5,"moment":6,"underscore":7}],2:[function(require,module,exports){
+},{"jquery":5,"moment":6,"underscore":7}],3:[function(require,module,exports){
 'use strict';
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
@@ -49,9 +104,9 @@ var _cpu = require('./cpu');
 
 var _cpu2 = _interopRequireDefault(_cpu);
 
-var _playingcard = require('./playingcard');
+var _card = require('./card');
 
-var _playingcard2 = _interopRequireDefault(_playingcard);
+var _card2 = _interopRequireDefault(_card);
 
 // Recording clicks
 
@@ -59,13 +114,20 @@ console.log('Hello, World');
 
 var cardQuantity = 52;
 var countCard = function countCard() {
+
   cardQuantity -= 1;
   console.log(cardQuantity);
+
+  if (cardQuantity <= 0) {
+    console.log('end of deck');
+  } else {
+    console.log('play');
+  }
 };
 
 (0, _jquery2['default'])('.button1').on('click', countCard);
 
-},{"./cpu":1,"./player1":3,"./playingcard":4,"jquery":5,"moment":6,"underscore":7}],3:[function(require,module,exports){
+},{"./card":1,"./cpu":2,"./player1":4,"jquery":5,"moment":6,"underscore":7}],4:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
@@ -89,32 +151,6 @@ var _moment2 = _interopRequireDefault(_moment);
 var Player1 = function Player1() {};
 
 exports['default'] = Player1;
-module.exports = exports['default'];
-
-},{"jquery":5,"moment":6,"underscore":7}],4:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, '__esModule', {
-  value: true
-});
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-var _jquery = require('jquery');
-
-var _jquery2 = _interopRequireDefault(_jquery);
-
-var _underscore = require('underscore');
-
-var _underscore2 = _interopRequireDefault(_underscore);
-
-var _moment = require('moment');
-
-var _moment2 = _interopRequireDefault(_moment);
-
-var playingCard = function playingCard() {};
-
-exports['default'] = playingCard;
 module.exports = exports['default'];
 
 },{"jquery":5,"moment":6,"underscore":7}],5:[function(require,module,exports){
@@ -14075,7 +14111,7 @@ return jQuery;
   }
 }.call(this));
 
-},{}]},{},[2])
+},{}]},{},[3])
 
 
 //# sourceMappingURL=main.js.map
