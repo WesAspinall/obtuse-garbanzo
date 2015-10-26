@@ -3,33 +3,34 @@ import _ from 'underscore';
 import moment from 'moment';
 
 // Suit Constructor
-let Suit = function() {
+let suitType = function() {
 
-  this.diamonds = 'diamonds',
   this.hearts = 'hearts',
+  this.clubs = 'clubs',
+  this.diamonds = 'diamonds',
   this.spades = 'spades',
-  this.clubs = 'clubs'
  
 };
 
-// CardConstructor
-let Card = function(name, suit, img, cardValue) {
+// Card Constructor
+let Card = function(name, suitType, img, cardValue) {
 
-  this.name = name,
-  this.suit = suit,
-  this.img = img,
-  this.cardValue = cardValue;
+  this.Name = name,
+  this.suitType = suitType,
+  this.Img = img,
+  this.CardValue = cardValue;
 
 }
 
 Card.prototype.toString = function() {
   let value = '';
   switch (this.suit) {
-    case Suit.hearts: value = 'Hearts';
-    case Suit.clubs: value = 'Clubs';
-    case Suit.diamonds: value = 'Diamonds';
-    case Suit.spades: value = 'Spades';
+    case suitType.hearts: value = 'Hearts';
+    case suitType.clubs: value = 'Clubs';
+    case suitType.diamonds: value = 'Diamonds';
+    case suitType.spades: value = 'Spades';
   }
+  return name 
 }
 
 
@@ -38,4 +39,3 @@ let deck = [];
 deck.push(new Card('','','',''))
 
 deo
-export default Card;

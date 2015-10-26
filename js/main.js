@@ -9,10 +9,6 @@ import CPU from './cpu';
 import Card from './card';
 
 
-
-
-
-
 // Recording clicks
 
 let cardQuantity = 52;
@@ -27,5 +23,7 @@ let countCard = function() {
     console.log('play');
   }
 };
+
+
 
 $('.button1').on('click', countCard);
